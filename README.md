@@ -64,3 +64,15 @@ java -jar target/prebid-server.jar --spring.config.additional-location=sample/co
 ```
 curl 'http://0.0.0.0:8080/status'
 ```
+
+### Endpoints Available for Testing
+
+/info/bidders - Shows a list of bidders that are available to bid.
+
+/info/bidders/33across - Shows bid configurations for 33across.
+
+/openrtb2/auction - Sends out bid request, receives bid responses.
+
+/cookie_sync - Synchronizes cookies.
+
+/status - Shows the status of the Prebid Server Java project.
