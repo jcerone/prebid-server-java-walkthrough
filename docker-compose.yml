@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  prebid-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: prebid-server-java
+    command: >
+      java -jar prebid-server.jar
+      --spring.config.additional-location=prebid-config.yaml
+      --server.port=8080
+      --endpoints.status.port=8080
